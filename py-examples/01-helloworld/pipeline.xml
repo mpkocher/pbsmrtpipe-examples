@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pipeline-template>
+    <entry-points>
+	<!-- Bind an entry point to our first task. The entry point id will be used as CLI arg --> 
+        <entry-point id="$entry:eid_txt" in="pbsmrtpipe_examples.tasks.dev_mk_example_txt:0" />
+    </entry-points>
+    <bindings>
+	<!-- Bind the output of our task to the input of an new task --> 
+        <binding out="pbsmrtpipe_examples.tasks.dev_mk_example_txt:0" in="pbsmrtpipe.tasks.dev_txt_to_fasta:0" />
+    </bindings>
+
+    <!-- Workflow Level Options -->
+    <options>
+        <option id="pbsmrtpipe.options.debug_mode" >
+            <value>True</value>
+        </option>
+        <option id="pbsmrtpipe.options.max_nproc" >
+            <value>24</value>
+        </option>
+    </options>
+
+    <!-- Task Level Options -->
+    <task-options>
+        <option id="pbsmrtpipe.task_options.option_id1">
+            <value>1234</value>
+        </option>
+        <option id="pbsmrtpipe.task_options.option_id2">
+        <value>abcd</value>
+        </option>
+    </task-options>
+
+</pipeline-template>

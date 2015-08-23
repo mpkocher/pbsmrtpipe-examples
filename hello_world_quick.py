@@ -1,40 +1,5 @@
-# Defining tasks and pipelines for pbsmrtpipe
+#!/usr/bin/env python
 
-pbsmrtpipe supports python, R and Scala for 
-
-
-## Setup
-
-Requires python with virtualenv
-
-Installing the necessary python components:
-
-```
-$> virtualenv ve
-$> source ve/bin/activate
-$> pip install -r REQUIREMENTS.txt
-
-```
-
-Setup ENV
-
-```
-$> # set path to TCs so pbsmrtpipe can load them
-$> export PB_TOOL_CONTRACT_DIR=$(pwd)/tool-contracts
-$> pbsmrtpipe show-tasks # your tasks should show up in the registry
-$> # add *.py examples to our path
-$> export PATH=$(pwd):$PATH
-$> # Sanity check
-$> # rebuild Tool Contracts
-$> make python-tool-contracts
-$> pbsmrtpipe show-tasks # final check to see if your tasks are in the registry
-```
-
-[pbcommmand](https://github.com/PacificBiosciences/pbcommand) provides a python interface to define tasks that can be consumed in pbsmrtpipe.
-
-
-QuickStart to Defining a Task (via ToolContract Interface)
-```python
 import sys
 import logging
 
@@ -64,17 +29,8 @@ def _example_main(input_files, output_files, **kwargs):
 def run_rtc(rtc):
     return _example_main(rtc.task.input_files[0], rtc.task.output_files[0], nproc=rtc.task.nproc)
 
-# More tasks can be registered by calling @registry()
 
 if __name__ == '__main__':
     sys.exit(registry_runner(registry, sys.argv[1:]))
 
-```
-
-
-## Installing R components:
-
-Todo
-
-[QuickStart pbcommandR](https://github.com/mpkocher/pbcommandR#quick-start)
 
