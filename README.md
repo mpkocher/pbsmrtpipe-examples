@@ -18,7 +18,7 @@ $> pip install -r REQUIREMENTS.txt
 
 ```
 
-Setup ENV
+### Setup ENV
 
 ```
 $> # set path to TCs so pbsmrtpipe can load them
@@ -31,6 +31,26 @@ $> # rebuild Tool Contracts
 $> make python-tool-contracts
 $> pbsmrtpipe show-tasks # final check to see if your tasks are in the registry
 ```
+
+
+### Run Example
+
+```
+$> cd py-examples/01-helloworld
+$> # pipeline definition
+$> cat pipeline.xml
+$> # preset defintion 
+$> cat preset.xml
+$> # test layer
+$> cat testkit.cfg
+$> # This will call pbsmrtpipe and run a sanity tests
+$> pbtestkit-runner testkit.cfg
+$> # output will be in job_output
+$> cd job_output
+```
+
+
+## Defining Tasks with Python
 
 [pbcommmand](https://github.com/PacificBiosciences/pbcommand) provides a python interface to define tasks that can be consumed in pbsmrtpipe.
 
@@ -74,7 +94,7 @@ if __name__ == '__main__':
 ```
 
 
-## Installing R components:
+## Defining Tasks with R:
 
 Todo
 
