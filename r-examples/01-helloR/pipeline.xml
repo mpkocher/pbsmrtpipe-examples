@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pipeline-template>
+
+    <entry-points>
+        <entry-point id="$entry:eid_txt" in="pbcommandR.tasks.helloWorld:0" />
+    </entry-points>
+
+    <bindings>
+        <!-- There's only one task so this isn't needed
+        <binding in="pbsmrtpipe.tasks.filter_subreads.0" out="pbsmrtpipe.tasks.input_xml_to_fofn.0" />
+        -->
+    </bindings>
+
+    <options>
+    <!-- workflow level options  -->
+        <option id="pbsmrtpipe.options.max_nchunks" >
+            <value>7</value>
+        </option>
+        <option id="pbsmrtpipe.options.max_nproc" >
+            <value>13</value>
+        </option>
+    </options>
+
+    <!-- task level options here -->
+    <task-options>
+        <option id="pbsmrtpipe.task_option.option_id1">
+            <value>1234</value>
+        </option>
+        <option id="pbsmrtpipe.task_option.option_id2">
+        <value>abcd</value>
+        </option>
+    </task-options>
+
+</pipeline-template>

@@ -96,7 +96,36 @@ if __name__ == '__main__':
 
 ## Defining Tasks with R:
 
+Install requires packrat and [pbcommandR](https://github.com/mpkocher/pbcommandR).
+
+```r
+> library(devtools)
+> install_githhub("mpkocher/pbcommandR")
+```
+
+## Setup ENV
+
 Todo
 
+
+### Run Example
+
+```
+$> cd r-examples/01-helloR
+$> # pipeline definition
+$> cat pipeline.xml
+$> # preset defintion 
+$> cat preset.xml
+$> # test layer
+$> cat testkit.cfg
+$> # This will call pbsmrtpipe and run a sanity tests
+$> pbtestkit-runner testkit.cfg
+$> # output will be in job_output
+```
+
+## Defining Tasks with R
+
 [QuickStart pbcommandR](https://github.com/mpkocher/pbcommandR#quick-start)
+
+
 
