@@ -1,17 +1,19 @@
 # Defining tasks and pipelines for pbsmrtpipe
 
-pbsmrtpipe supports python, R and Scala for 
+pbsmrtpipe supports python, R and Scala for via the pacbio Tool Contract interface.
 
 
-## Setup
+## Setup to run Examples
 
-Requires python with virtualenv
+Requires python (2.7.9)  with virtualenv
 
 Installing the necessary python components:
 
 ```
 $> virtualenv ve
 $> source ve/bin/activate
+$> # this will install pbcommand, pbcore and pbsmrtpipe from github repos. 
+$> # modify the REQUIREMENTS.txt file to point to other versions
 $> pip install -r REQUIREMENTS.txt
 
 ```
