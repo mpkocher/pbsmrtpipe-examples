@@ -27,7 +27,7 @@
         "file_type_id": "PacBio.FileTypes.Fasta",
         "id": "id_PacBio.FileTypes.Fasta",
         "title": "Display name  PacBio.FileTypes.Fasta",
-        "default_name": "file.fasta",
+        "default_name": "file",
         "description": "File type PacBio.FileTypes.Fasta"
       }
     ],

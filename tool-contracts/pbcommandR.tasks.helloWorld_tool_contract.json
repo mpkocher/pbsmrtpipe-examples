@@ -27,7 +27,7 @@
         "file_type_id": "PacBio.FileTypes.txt",
         "id": "id_PacBio.FileTypes.txt",
         "title": "Display name  PacBio.FileTypes.txt",
-        "default_name": "file.txt",
+        "default_name": "file",
         "description": "File type PacBio.FileTypes.txt"
       }
     ],
