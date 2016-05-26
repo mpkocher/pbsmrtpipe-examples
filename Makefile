@@ -20,7 +20,9 @@ py-tc: py-tool-contracts
 clean-all:
 	rm -rf py-examples/*/job_output
 	rm -rf r-examples/*/job_output
-	
+
+test:
+	cd py-examples/01-helloworld/ && pbtestkit-runner --debug testkit.cfg
 	
 
 

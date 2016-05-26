@@ -28,7 +28,7 @@ $> # add *.py examples to our path
 $> export PATH=$(pwd):$PATH
 $> # Sanity check
 $> # rebuild Tool Contracts
-$> make python-tool-contracts
+$> make py-tool-contracts
 $> pbsmrtpipe show-tasks # final check to see if your tasks are in the registry
 ```
 
