@@ -1,8 +1,8 @@
 {
-  "version": "0.2.1",
+  "version": "0.3.2",
   "driver": {
     "serialization": "json",
-    "exe": "exampleHelloWorld_R.sh run-rtc "
+    "exe": "exampleHelloWorld.R run-rtc "
   },
   "tool_contract_id": "pbcommandR.tasks.filterFasta",
   "tool_contract": {
@@ -17,7 +17,7 @@
     "input_types": [
       {
         "file_type_id": "PacBio.FileTypes.Fasta",
-        "id": "id_PacBio.FileTypes.Fasta",
+        "id": "id_0_fasta",
         "title": "Display name  PacBio.FileTypes.Fasta",
         "description": "File type  PacBio.FileTypes.Fasta"
       }
@@ -25,12 +25,12 @@
     "output_types": [
       {
         "file_type_id": "PacBio.FileTypes.Fasta",
-        "id": "id_PacBio.FileTypes.Fasta",
+        "id": "id_0_fasta",
         "title": "Display name  PacBio.FileTypes.Fasta",
-        "default_name": "file",
-        "description": "File type PacBio.FileTypes.Fasta"
+        "description": "File type  PacBio.FileTypes.Fasta",
+        "default_name": "file"
       }
     ],
-    "comment": "Created from pbcommandR version  0.2.1"
+    "comment": "Created from pbcommandR version  0.3.2"
   }
 }

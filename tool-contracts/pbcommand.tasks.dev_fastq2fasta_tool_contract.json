@@ -5,8 +5,8 @@
         "serialization": "json"
     },
     "tool_contract": {
-        "_comment": "Created by v0.3.26",
-        "description": "Quick tool dev_fastq2fasta pbcommand.tasks.dev_fastq2fasta",
+        "_comment": "Created by v0.3.27",
+        "description": "Dev Task Fastq to Fasta Example",
         "input_types": [
             {
                 "description": "description for PacBio.FileTypes.Fastq_0",
@@ -16,7 +16,7 @@
             }
         ],
         "is_distributed": true,
-        "name": "Tool dev_fastq2fasta",
+        "name": "Fastq to Fasta",
         "nproc": 1,
         "output_types": [
             {

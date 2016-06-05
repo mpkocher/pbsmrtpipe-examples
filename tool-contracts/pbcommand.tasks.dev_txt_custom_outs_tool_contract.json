@@ -5,7 +5,7 @@
         "serialization": "json"
     },
     "tool_contract": {
-        "_comment": "Created by v0.3.26",
+        "_comment": "Created by v0.3.27",
         "description": "Quick tool dev_txt_custom_outs pbcommand.tasks.dev_txt_custom_outs",
         "input_types": [
             {
@@ -16,7 +16,7 @@
             }
         ],
         "is_distributed": true,
-        "name": "Tool dev_txt_custom_outs",
+        "name": "Custom Txt Task",
         "nproc": 1,
         "output_types": [
             {

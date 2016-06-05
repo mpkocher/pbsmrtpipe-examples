@@ -5,7 +5,7 @@
         "serialization": "json"
     },
     "tool_contract": {
-        "_comment": "Created by v0.3.26",
+        "_comment": "Created by v0.3.27",
         "description": "Quick tool dev_filter_fasta pbsmrtpipe.tasks.dev_filter_fasta",
         "input_types": [
             {
