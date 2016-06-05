@@ -23,8 +23,13 @@ clean:
 	rm -rf py-examples/*/job_output
 	rm -rf r-examples/*/job_output
 
-test:
+test-py:
 	cd py-examples/01-helloworld/ && pbtestkit-runner --debug testkit.cfg
+test-r:
+	cd r-examples/01-helloR/ && pbtestkit-runner --debug testkit.cfg
+	cd r-examples/01-pbcommandr-dev/ && pbtestkit-runner --debug testkit.cfg
+
+test: test-py test-r
 	
 
 
