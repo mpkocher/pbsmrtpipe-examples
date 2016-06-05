@@ -11,16 +11,16 @@ Currently tested with:
 
 Python:
 
-pbcommand==0.3.27
-pbcore==1.2.10
-pbcoretools==0.1.10
-pbreports==2.5.1
-pbsmrtpipe==0.40.0
+- pbcommand==0.3.27
+- pbcore==1.2.10
+- pbcoretools==0.1.10
+- pbreports==2.5.1
+- pbsmrtpipe==0.40.0
 
 
 R:
 
-pbcommandR 0.3.2
+- pbcommandR 0.3.2
 
 Installing the necessary python components:
 
