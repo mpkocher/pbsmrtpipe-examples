@@ -58,3 +58,6 @@ target/
 
 # local virtualenv
 ve
+
+# MK
+setup-env-r.sh
