@@ -2,10 +2,25 @@
 
 pbsmrtpipe supports python, R and Scala for via the pacbio Tool Contract interface.
 
-
 ## Setup to run Examples
 
 Requires python (2.7.9)  with virtualenv
+
+
+Currently tested with:
+
+Python:
+
+pbcommand==0.3.27
+pbcore==1.2.10
+pbcoretools==0.1.10
+pbreports==2.5.1
+pbsmrtpipe==0.40.0
+
+
+R:
+
+pbcommandR 0.3.2
 
 Installing the necessary python components:
 
@@ -18,7 +33,9 @@ $> pip install -r REQUIREMENTS.txt
 
 ```
 
-### Setup ENV
+Note, the REQUIREMENTS.txt file is pulling from master, this might be incompatible with newer versions.
+
+### Setup ENV for Python tasks
 
 ```
 $> # set path to TCs so pbsmrtpipe can load them
@@ -32,6 +49,24 @@ $> make py-tool-contracts
 $> pbsmrtpipe show-tasks # final check to see if your tasks are in the registry
 ```
 
+Or call the included `setup-env.sh` to setup the python ENV.
+
+```
+$> source setup-env.sh # will set the TC env var and PATH
+```
+
+### Setup ENV for R pipelines
+
+Install [pbcommandR](https://github.com/PacificBiosciences/pbcommandR) using `install_githhub("PacificBiosciences/pbcommandR")`
+
+Set the `R_LIBS` custom path and `bin` directory for pbcommandR exes.
+
+Example:
+
+```
+$> export R_LIBS=/Users/mkocher/gh_projects/pbcommandR/packrat/lib/x87_64-apple-darwin15.4.0/3.3.0
+$> export PATH=/Users/mkocher/gh_projects/pbcommandR/bin:$PATH
+```
 
 ### Run Example
 
@@ -49,6 +84,12 @@ $> # output will be in job_output
 $> cd job_output
 ```
 
+Or run make target
+
+```
+$> make clean
+$> make test-r
+```
 
 ## Defining Tasks with Python
 
@@ -96,16 +137,16 @@ if __name__ == '__main__':
 
 ## Defining Tasks with R:
 
-Install requires packrat and [pbcommandR](https://github.com/mpkocher/pbcommandR).
+Install requires packrat and [pbcommandR](https://github.com/PacificBiosciences/pbcommandR).
 
 ```r
 > library(devtools)
-> install_githhub("mpkocher/pbcommandR")
+> install_githhub("PacficBiosciences/pbcommandR")
 ```
 
-## Setup ENV
+## Setup R ENV
 
-Todo
+Setup the `R_LIBS` env var and set the PATH to encluded the root pbcommandR + `/bin/` dir
 
 
 ### Run Example
@@ -123,9 +164,15 @@ $> pbtestkit-runner testkit.cfg
 $> # output will be in job_output
 ```
 
+Or run make target
+
+```
+$> make test-r
+```
+
 ## Defining Tasks with R
 
-[QuickStart pbcommandR](https://github.com/mpkocher/pbcommandR#quick-start)
+[QuickStart pbcommandR](https://github.com/PacificBiosciences/pbcommandR#quick-start)
 
 
 
