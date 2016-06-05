@@ -3,3 +3,6 @@
 -e git://github.com/PacificBiosciences/pbcommand.git#egg=pbcommand
 # Use my newest version
 -e git://github.com/mpkocher/pbsmrtpipe.git#egg=pbsmrtpipe
+# Extra libs to run other pipelines
+#-e git://github.com/PacificBiosciences/pbcoretools.git#egg=pbcoretool
+#-e git://github.com/PacificBiosciences/pbreports.git#egg=pbreports
