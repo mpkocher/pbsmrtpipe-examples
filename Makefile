@@ -17,7 +17,9 @@ py-tool-contracts:
 	
 py-tc: py-tool-contracts
 
-clean-all:
+clean:
+	find py-examples -name "0.*" -delete 
+	find r-examples -name "0.*"  -delete
 	rm -rf py-examples/*/job_output
 	rm -rf r-examples/*/job_output
 
