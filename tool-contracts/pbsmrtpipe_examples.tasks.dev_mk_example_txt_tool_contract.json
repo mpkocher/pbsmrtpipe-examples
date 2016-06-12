@@ -5,7 +5,7 @@
         "serialization": "json"
     },
     "tool_contract": {
-        "_comment": "Created by v0.3.27",
+        "_comment": "Created by v0.3.26",
         "description": "Quick tool dev_mk_example_txt pbsmrtpipe_examples.tasks.dev_mk_example_txt",
         "input_types": [
             {
@@ -57,5 +57,5 @@
         "tool_contract_id": "pbsmrtpipe_examples.tasks.dev_mk_example_txt"
     },
     "tool_contract_id": "pbsmrtpipe_examples.tasks.dev_mk_example_txt",
-    "version": "0.2.1"
+    "version": "0.2.2"
 }
