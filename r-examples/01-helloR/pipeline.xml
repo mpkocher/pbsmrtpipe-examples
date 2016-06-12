@@ -2,7 +2,10 @@
 <pipeline-template>
 
     <entry-points>
-        <entry-point id="$entry:eid_txt" in="pbcommandR.tasks.helloWorld:0" />
+	<!-- This is a task defined in pbcommandR -->
+	<!-- <entry-point id="$entry:eid_txt" in="pbcommandR.tasks.hello_world:0" /> -->
+	<!-- This is the example.R  task define in pbsmrtpipe-examples/example.R -->
+        <entry-point id="$entry:eid_txt" in="pbsmrtpipe_examples.tasks.example_hello_world_r:0" />
     </entry-points>
 
     <bindings>
