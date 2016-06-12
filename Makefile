@@ -28,6 +28,7 @@ test-py:
 test-r:
 	cd r-examples/01-helloR/ && pbtestkit-runner --debug testkit.cfg
 	cd r-examples/02-pbcommandr-dev/ && pbtestkit-runner --debug testkit.cfg
+	cd r-examples/03-pbcommandr-all/ && pbtestkit-runner --debug testkit.cfg
 
 r-tool-contracts:
 	hello_world.R emit-tc tool-contracts
