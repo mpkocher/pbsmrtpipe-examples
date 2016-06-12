@@ -1,54 +1,59 @@
 #!/usr/bin/env python
-"""Simple Hello World example for using pbcommand.
 
-This example does NOT emit or consume tool contracts, it's for building common
-commandline interfaces with (hopefully) minimal boiler plate machinery.
-
-See the hello_world_quick.py for an example of interfacing with the "Quick"
-commandline interface.
-
-Author: Michael Kocher
-"""
 import sys
 import logging
 
-from pbcommand.utils import setup_log
-from pbcommand.cli import get_default_argparser, pacbio_args_runner
-import pbcommand.common_options as C
-from pbcommand.validators import validate_file
-
+from pbcommand.models import FileTypes
+from pbcommand.cli import registry_builder, registry_runner
 
 log = logging.getLogger(__name__)
 
-__version__ = "0.1.1"
+NAMESPACE = "pbsmrtpipe_examples"
+
+# the 'Driver' exe needs to be your your path. The first arg will be the path
+# to the resolved tool contract.
+#
+# Note, When the tool contract is emitted, the 'run-rtc'
+# will automatically be added to the driver.
+#
+# When this commandline tool is invoked, it will be of the form:
+# hello_world_quick.py run-rtc /path/to/resolved-tool-contract.py
+registry = registry_builder(NAMESPACE, "hello_world.py ")
 
 
-def run_main(fasta_in, fasta_out, min_sequence_length):
-    """This should be imported from your library code"""
-    _d = dict(i=fasta_in, o=fasta_out, s=min_sequence_length)
-    log.info("MOCK filtering (<{s}) fasta {i} to {o}".format(**_d))
-    with open(fasta_out, 'w') as f:
-        f.write(">record_1\nACGT")
-    # Every main should return an positive integer return code
+def _example_main(input_file, output_file, **kwargs):
+    """
+    This func should be imported from your python package.
+
+    This should have *no* dependency on the pbcommand IO, such as the RTC/TC models.
+    """
+
+    # This is just for test purposes
+    log.info("Running example main with {i} {o} kw:{k}".format(i=input_file,
+                                                               o=output_file,
+                                                               k=kwargs))
+
+    # write mock output files, otherwise the End-to-End test will fail when
+    # run within testkit
+    with open(output_file, 'w') as f:
+        f.write("MOCK TEST DATA")
     return 0
 
 
-def get_parser():
-    p = get_default_argparser(__version__, __doc__)
-    C.add_base_options(p)
-    p.add_argument("fasta_in", type=validate_file, help="Fasta Input")
-    p.add_argument("fasta_out", type=str, help="Output Filtered Fasta file")
-    p.add_argument("--min-length", type=int, default=50, help="Min Sequence length")
-    return p
+@registry("dev_mk_example_txt", "0.2.2", (FileTypes.TXT, ), (FileTypes.TXT, ), nproc=1, options=dict(alpha=1234))
+def run_rtc(rtc):
+    """Example Task for testing. Takes a txt file as input and writes a txt file with mock data"""
+    # The above docstring will be used as the Task/ToolContract Description
 
+    log.info("Got RTC task options {t}".format(t=rtc.task.options))
+    log.info("Got nproc {n}".format(n=rtc.task.nproc))
 
-def _args_runner(args):
-    return run_main(args.fasta_in, args.fasta_out, args.min_length)
-
-
-def main(argv=sys.argv):
-    return pacbio_args_runner(argv[1:], get_parser(), _args_runner, log, setup_log)
+    # The Task options are now accessible via global identifier
+    alpha = rtc.task.options['pbsmrtpipe_examples.task_options.alpha']
+    return _example_main(rtc.task.input_files[0], rtc.task.output_files[0], nproc=rtc.task.nproc, alpha=alpha)
 
 
 if __name__ == '__main__':
-    sys.exit(main())
+    sys.exit(registry_runner(registry, sys.argv[1:]))
+
+

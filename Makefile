@@ -13,7 +13,7 @@ py-tool-contracts:
 	python -m pbcommand.cli.examples.dev_app --emit-tool-contract > tool-contracts/dev_example_dev_txt_app_tool_contract.json
 	python -m pbcommand.cli.examples.dev_quick_hello_world emit-tool-contracts -o tool-contracts
 	python -m pbsmrtpipe.pb_tasks.dev emit-tool-contracts -o tool-contracts
-	hello_world_quick.py emit-tool-contracts -o tool-contracts
+	hello_world.py emit-tool-contracts -o tool-contracts
 	
 py-tc: py-tool-contracts
 
