@@ -2,8 +2,8 @@
 <pipeline-template>
 
     <entry-points>
-        <entry-point id="$entry:eid_fasta" in="pbcommandR.tasks.filterFasta:0" />
-        <entry-point id="$entry:eid_fasta" in="pbcommandR.tasks.fastaReport:0" />
+        <entry-point id="$entry:eid_fasta" in="pbcommandR.tasks.filter_fasta:0" />
+        <entry-point id="$entry:eid_fasta" in="pbcommandR.tasks.fasta_report:0" />
     </entry-points>
 
     <bindings>
