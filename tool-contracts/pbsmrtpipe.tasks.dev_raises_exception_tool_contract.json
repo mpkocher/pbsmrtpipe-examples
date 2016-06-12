@@ -5,7 +5,7 @@
         "serialization": "json"
     },
     "tool_contract": {
-        "_comment": "Created by v0.3.27",
+        "_comment": "Created by v0.3.26",
         "description": "Quick tool dev_raises_exception pbsmrtpipe.tasks.dev_raises_exception",
         "input_types": [
             {

@@ -2,16 +2,14 @@
 <pipeline-template>
 
     <entry-points>
-	<!-- This is a task defined in pbcommandR -->
-	<!-- <entry-point id="$entry:eid_txt" in="pbcommandR.tasks.hello_world:0" /> -->
-	<!-- This is the example.R  task define in pbsmrtpipe-examples/example.R -->
-        <entry-point id="$entry:eid_txt" in="pbsmrtpipe_examples.tasks.example_hello_world_r:0" />
+        <entry-point id="$entry:eid_fasta" in="pbcommandR.tasks.filter_fasta:0" />
+        <entry-point id="$entry:eid_fasta" in="pbcommandR.tasks.fasta_report:0" />
+	<entry-point id="$entry:eid_txt" in="pbcommandR.tasks.hello_world:0" />
     </entry-points>
 
     <bindings>
-        <!-- There's only one task so this isn't needed
-        <binding in="pbsmrtpipe.tasks.filter_subreads.0" out="pbsmrtpipe.tasks.input_xml_to_fofn.0" />
-        -->
+	<!-- Take the output of R task and use as the input to a python task -->
+        <binding out="pbcommandR.tasks.hello_world:0" in="pbcommand.tasks.dev_txt_hello:0" />
     </bindings>
 
     <options>
