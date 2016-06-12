@@ -5,7 +5,7 @@
         "serialization": "json"
     },
     "tool_contract": {
-        "_comment": "Created by v0.3.27",
+        "_comment": "Created by v0.3.26",
         "description": "Quick tool dev_reference_ds_report pbsmrtpipe.tasks.dev_reference_ds_report",
         "input_types": [
             {

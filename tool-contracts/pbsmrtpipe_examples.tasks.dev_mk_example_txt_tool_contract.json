@@ -1,7 +1,7 @@
 {
     "driver": {
         "env": {},
-        "exe": "hello_world_quick.py  run-rtc  ",
+        "exe": "hello_world.py  run-rtc  ",
         "serialization": "json"
     },
     "tool_contract": {
