@@ -146,7 +146,7 @@ Install requires packrat and [pbcommandR](https://github.com/PacificBiosciences/
 
 ## Setup R ENV
 
-Setup the `R_LIBS` env var and set the PATH to encluded the root pbcommandR + `/bin/` dir
+Setup the `R_LIBS` env var and set the PATH to include the root pbcommandR + `/bin/` dir
 
 
 ### Run Example
