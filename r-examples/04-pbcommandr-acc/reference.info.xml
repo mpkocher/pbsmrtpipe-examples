@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<reference_info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="lambdaNEB" last_modified="2016-05-31T13:28:56-0700" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+    <organism>
+        <name>lambda</name>
+        <ploidy>haploid</ploidy>
+    </organism>
+    <reference>
+        <description>Fasta converter v0.4.0 to PacBio Reference.info.xml and ReferenceSet XML</description>
+        <file format="text/fasta">./sequence/lambdaNEB.fasta</file>
+        <index_file type="indexer">./sequence/lambdaNEB.fasta.index</index_file>
+        <index_file type="sawriter">./sequence/lambdaNEB.fasta.sa</index_file>
+        <index_file type="sam_idx">./sequence/lambdaNEB.fasta.fai</index_file>
+        <index_file type="fasta_contig_index">./sequence/lambdaNEB.fasta.contig.index</index_file>
+        <max_contig_length>48502</max_contig_length>
+        <num_contigs>1</num_contigs>
+        <type>sample</type>
+    </reference>
+    <contigs>
+        <contig displayName="lambda_NEB3011" id="ref000001" length="48502">
+            <digest type="md5">a1319ff90e994c8190a4fe6569d0822a</digest>
+            <header>lambda_NEB3011</header>
+        </contig>
+    </contigs>
+</reference_info>

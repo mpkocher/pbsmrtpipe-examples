@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReferenceSet xmlns="http://pacificbiosciences.com/PacBioDatasets.xsd" xmlns:ns0="http://pacificbiosciences.com/PacBioBaseDataModel.xsd" xmlns:ns4="http://pacificbiosciences.com/PacBioCollectionMetadata.xsd" xmlns:ns1="http://pacificbiosciences.com/PacBioSampleInfo.xsd" xmlns:ns6="http://pacificbiosciences.com/PacBioReagentKit.xsd" Name="lambdaNEB" Description="Converted Reference lambdaNEB" Tags="converted, reference" Version="3.0.1" CreatedAt="2016-05-31T13:28:56.786-07:00" ModifiedAt="2016-05-31T13:28:56.786-07:00" UniqueId="ffa9b910-cb1b-4f48-ada7-4ac440ffa91a" MetaType="PacBio.DataSet.ReferenceSet" TimeStampedName="referenceset_160531_132856">
+   <ns0:ExternalResources>
+      <ns0:ExternalResource Name="Fasta lambdaNEB" Description="Converted with v0.5.0 Reference Name lambdaNEB" Tags="converted, reference" ResourceId="./sequence/lambdaNEB.fasta" CreatedAt="2016-05-31T13:28:56.786-07:00" ModifiedAt="2016-05-31T13:28:56.786-07:00" UniqueId="7cf17215-9c3a-4230-aba3-eb8548d8e960" MetaType="PacBio.ReferenceFile.ReferenceFastaFile" TimeStampedName="fasta_160531_132856">
+         <ns0:FileIndices>
+            <ns0:FileIndex ResourceId="./sequence/lambdaNEB.fasta.index" UniqueId="8936c5e7-c2af-45e8-a0ff-bc21913d3b8f" MetaType="PacBio.Index.Indexer" TimeStampedName="index_160531_132856"/>
+            <ns0:FileIndex ResourceId="./sequence/lambdaNEB.fasta.sa" UniqueId="9b480a1c-e461-4ef9-b3f6-8ce0ab1025fa" MetaType="PacBio.Index.SaWriterIndex" TimeStampedName="index_160531_132856"/>
+            <ns0:FileIndex ResourceId="./sequence/lambdaNEB.fasta.fai" UniqueId="2d0b8ed7-717c-4daa-a7e6-42464cf2c02f" MetaType="PacBio.Index.SamIndex" TimeStampedName="index_160531_132856"/>
+            <ns0:FileIndex ResourceId="./sequence/lambdaNEB.fasta.contig.index" UniqueId="c986b2ff-77dc-4164-aa6d-bae6163bfe27" MetaType="PacBio.Index.FastaContigIndex" TimeStampedName="index_160531_132856"/>
+         </ns0:FileIndices>
+      </ns0:ExternalResource>
+   </ns0:ExternalResources>
+   <DataSetMetadata>
+      <TotalLength>48502</TotalLength>
+      <NumRecords>1</NumRecords>
+      <Organism>lambda</Organism>
+      <Ploidy>haploid</Ploidy>
+      <Contigs>
+         <Contig Name="ref000001" Description="lambda_NEB3011" Length="48502" Digest="a1319ff90e994c8190a4fe6569d0822a"/>
+      </Contigs>
+   </DataSetMetadata>
+</ReferenceSet>

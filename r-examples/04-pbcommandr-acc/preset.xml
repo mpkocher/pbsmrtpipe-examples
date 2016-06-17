@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<pipeline-template-preset id="MyPreset">
+
+    <!-- Default Workflow level Options -->
+    <options>
+    <!-- workflow level options. Same as with the Protocol -->
+        <!-- MAX Number of Processors -->
+        <option id="pbsmrtpipe.options.max_nproc">
+            <value>8</value>
+        </option>
+
+        <!-- Distributed mode? -->
+        <option id="pbsmrtpipe.options.distributed_mode">
+            <value>False</value>
+        </option>
+ 
+        <!-- MAX Number of NPROC -->
+        <option id="pbsmrtpipe.options.max_nchunks">
+            <value>6</value>
+        </option>
+
+        <option id="pbsmrtpipe.options.tmp_dir">
+            <value>/tmp</value>
+        </option>
+
+    </options>
+
+    <!-- Default Task specific Options -->
+
+    <task-options>
+    </task-options>
+
+</pipeline-template-preset>

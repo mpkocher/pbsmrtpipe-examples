@@ -1,0 +1,14 @@
+{
+  "pipelineId": "pbsmrtpipe.pipelines.internal_cond_dev",
+  "conditions": [{
+    "condId": "cond_a",
+    "subreadset": "/home/NANOFLUIDICS/emollova/RecalledAdpaters/recalledAdapters_m54011_160506_235941.subreadset.xml",
+    "alignmentset": "m140905_042212_sidney_c100564852550000001823085912221377_s1_X0.subreadset.xml",
+    "referenceset": "referenceset.xml"
+  }, {
+    "condId": "cond_b",
+    "subreadset": "/home/NANOFLUIDICS/emollova/RecalledAdpaters/recalledAdapters_m54011_160506_235941.subreadset.xml",
+    "alignmentset": "m140905_042212_sidney_c100564852550000001823085912221377_s1_X0.subreadset.xml",
+    "referenceset": "referenceset.xml"
+  }]
+}
