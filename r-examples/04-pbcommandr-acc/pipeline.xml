@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pipeline-template>
+
+    <entry-points>
+        <entry-point id="$entry:eid_fasta" in="pbcommandR.tasks.filter_fasta:0" />
+        <entry-point id="$entry:eid_fasta" in="pbcommandR.tasks.fasta_report:0" />
+	<entry-point id="$entry:eid_txt" in="pbcommandR.tasks.hello_world:0" />
+    </entry-points>
+
+    <bindings>
+	<!-- Take the output of R task and use as the input to a python task -->
+        <binding out="pbcommandR.tasks.hello_world:0" in="pbcommand.tasks.dev_txt_hello:0" />
+    </bindings>
+
+    <options>
+    <!-- workflow level options  -->
+        <option id="pbsmrtpipe.options.max_nchunks" >
+            <value>7</value>
+        </option>
+        <option id="pbsmrtpipe.options.max_nproc" >
+            <value>13</value>
+        </option>
+    </options>
+
+    <!-- task level options here -->
+    <task-options>
+        <option id="pbsmrtpipe.task_option.option_id1">
+            <value>1234</value>
+        </option>
+        <option id="pbsmrtpipe.task_option.option_id2">
+        <value>abcd</value>
+        </option>
+    </task-options>
+
+</pipeline-template>
