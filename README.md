@@ -57,7 +57,7 @@ $> source setup-env.sh # will set the TC env var and PATH
 
 ### Setup ENV for R pipelines
 
-Install [pbcommandR](https://github.com/PacificBiosciences/pbcommandR) using `install_githhub("PacificBiosciences/pbcommandR")`
+Install [pbcommandR](https://github.com/PacificBiosciences/pbcommandR) using `install_github("PacificBiosciences/pbcommandR")`
 
 Set the `R_LIBS` custom path and `bin` directory for pbcommandR exes.
 
