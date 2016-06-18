@@ -1,4 +1,0 @@
-<?xml version="1.0" ?>
-<pipeline-template-preset id="Mytest" >
-     <import-template id="pbsmrtpipe.pipelines.internal_cond_acc_density" />
- </pipeline-template-preset>
