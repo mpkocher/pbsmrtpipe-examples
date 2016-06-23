@@ -38,4 +38,6 @@ r-tc: r-tool-contracts
 test: test-py test-r
 	
 
+py-tc-custom:
+	python custom-exes/mh_toy.py emit-tool-contracts -o tool-contracts
 
